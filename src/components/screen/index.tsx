@@ -1,16 +1,19 @@
-import React from 'react';
-import { Text, View } from 'react-native';
+import React, { ReactNode } from 'react';
+import { SafeAreaView, StatusBar, View } from 'react-native';
 
 import styles from './styles';
 
 interface Props {
-  screenName: string;
+  children: ReactNode;
 }
 
-export const Screen: React.FC<Props> = ({ screenName }) => {
+export const Screen: React.FC<Props> = ({ children }) => {
   return (
-    <View style={styles.screen}>
-      <Text style={styles.screenText}>{screenName}</Text>
-    </View>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <SafeAreaView style={styles.container}>
+        <View style={styles.screen}>{children}</View>
+      </SafeAreaView>
+    </>
   );
 };
