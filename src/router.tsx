@@ -23,7 +23,10 @@ export type ModalFormScreenList = {
 
 const ModalFormScreen: React.ComponentType = () => {
   return (
-    <ModalFormStack.Navigator mode="modal" initialRouteName="Form 1">
+    <ModalFormStack.Navigator
+      headerMode="none"
+      mode="modal"
+      initialRouteName="Form 1">
       <ModalFormStack.Screen name="Form1" component={ModalForm1} />
       <ModalFormStack.Screen name="Form2" component={ModalForm2} />
       <ModalFormStack.Screen name="Form3" component={ModalForm3} />
@@ -33,7 +36,7 @@ const ModalFormScreen: React.ComponentType = () => {
 
 export const router = () => {
   return (
-    <ModalRoot.Navigator initialRouteName="Home">
+    <ModalRoot.Navigator headerMode="none" initialRouteName="Home">
       <ModalRoot.Screen name="Home" component={Home} />
       <ModalRoot.Screen name="Form" component={ModalFormScreen} />
       <ModalRoot.Screen name="Settings" component={Settings} />

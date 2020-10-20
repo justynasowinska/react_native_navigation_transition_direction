@@ -1,7 +1,7 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import { Button, Text } from 'react-native';
-import { Screen } from '../components/screen';
+import { Screen } from '../components/Screen';
 import { ModalFormScreenList } from '../router';
 import styles from './styles';
 
@@ -14,7 +14,7 @@ export const ModalForm1: React.FC<Props> = ({ navigation }) => {
   const onPressForm3Button = () => navigation.navigate('Form3');
 
   return (
-    <Screen>
+    <Screen headerTitle="Modal Form 1" rightAction="close">
       <Text style={styles.screenText}>Modal Form 1</Text>
       <Button title="Modal Form 2" onPress={onPressForm2Button} />
       <Button title="Modal Form 3" onPress={onPressForm3Button} />

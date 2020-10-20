@@ -1,7 +1,7 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
 import { Button, Text } from 'react-native';
-import { Screen } from '../components/screen';
+import { Screen } from '../components/Screen';
 import { ModalRootScreenList } from '../router';
 import styles from './styles';
 
@@ -14,7 +14,7 @@ export const Home: React.FC<Props> = ({ navigation }) => {
   const onPressSettingsButton = () => navigation.navigate('Settings');
 
   return (
-    <Screen>
+    <Screen headerTitle="Home">
       <Text style={styles.screenText}>Home Screen</Text>
       <Button title="Form" onPress={onPressFormButton} />
       <Button title="Settings" onPress={onPressSettingsButton} />
