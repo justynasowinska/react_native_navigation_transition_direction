@@ -8,6 +8,7 @@ target 'change_navigation_direction' do
 
   use_react_native!(:path => config["reactNativePath"])
 
+
   target 'change_navigation_directionTests' do
     inherit! :complete
     # Pods for testing

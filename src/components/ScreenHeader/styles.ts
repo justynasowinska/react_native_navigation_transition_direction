@@ -11,8 +11,6 @@ export default StyleSheet.create({
   leftAction: {
     position: 'absolute',
     left: 16,
-    bottom: 0,
-    top: 0,
   },
   title: {
     textAlign: 'center',

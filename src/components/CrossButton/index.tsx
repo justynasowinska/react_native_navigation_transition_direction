@@ -1,9 +1,8 @@
 import React from 'react';
-import { Text, TouchableOpacity } from 'react-native';
+import { TouchableOpacity } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 import { DEFAULT_ICON_HIT_SLOP } from '../utils/constants';
-
-import styles from './styles';
 
 interface Props {
   onPress: () => void;
@@ -11,10 +10,7 @@ interface Props {
 }
 
 export const CrossButton = ({ onPress }: Props) => (
-  <TouchableOpacity
-    onPress={onPress}
-    style={styles.backPadding}
-    hitSlop={DEFAULT_ICON_HIT_SLOP}>
-    <Text>X</Text>
+  <TouchableOpacity onPress={onPress} hitSlop={DEFAULT_ICON_HIT_SLOP}>
+    <Icon name="close" size={24} />
   </TouchableOpacity>
 );
