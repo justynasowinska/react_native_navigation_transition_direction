@@ -9,11 +9,11 @@ interface Props {
 }
 
 export const Modal1Page: React.FC<Props> = ({ navigation }) => {
-  const onPressForm2Button = () => navigation.navigate('Modal2Page');
+  const onPressNextPage = () => navigation.navigate('Modal2Page');
 
   return (
-    <Screen headerTitle="Modal 1 Page" rightAction="close">
-      <Button title="Next Page" onPress={onPressForm2Button} />
+    <Screen headerTitle="Modal 1 Page - Modal Animation" rightAction="close">
+      <Button title="Next Page" onPress={onPressNextPage} />
     </Screen>
   );
 };

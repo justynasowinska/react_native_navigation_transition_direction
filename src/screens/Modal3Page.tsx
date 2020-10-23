@@ -1,12 +1,19 @@
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import { Text } from 'react-native';
+import { Button } from 'react-native';
 import { Screen } from '../components/Screen';
-import styles from './styles';
+import { ModalScreenList } from '../router';
 
-export const Modal3Page: React.FC<{}> = () => {
+interface Props {
+  navigation: StackNavigationProp<ModalScreenList>;
+}
+
+export const Modal3Page: React.FC<Props> = ({ navigation }) => {
+  const onPressNextPage = () => navigation.navigate('Modal4Page');
+
   return (
-    <Screen headerTitle="Modal 3 Page" rightAction="back">
-      <Text style={styles.screenText}>Last Page</Text>
+    <Screen headerTitle="Modal 3 Page - Modal Animation" rightAction="close">
+      <Button title="Next Page" onPress={onPressNextPage} />
     </Screen>
   );
 };
