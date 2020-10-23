@@ -1,45 +1,45 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { Home } from './screens/Home';
-import { ModalForm1 } from './screens/ModalForm1';
-import { ModalForm2 } from './screens/ModalForm2';
-import { ModalForm3 } from './screens/ModalForm3';
-import { Settings } from './screens/Settings';
+import { Modal1Page } from './screens/Modal1Page';
+import { Modal2Page } from './screens/Modal2Page';
+import { Modal3Page } from './screens/Modal3Page';
+import { NotModal } from './screens/NotModal';
 
-const ModalRoot = createStackNavigator();
-const ModalFormStack = createStackNavigator();
+const Root = createStackNavigator();
+const ModalStack = createStackNavigator();
 
-export type ModalRootScreenList = {
+export type RootScreenList = {
   Home: undefined;
-  Form: undefined;
-  Settings: undefined;
+  Modal: undefined;
+  NotModal: undefined;
 };
 
-export type ModalFormScreenList = {
-  Form1: undefined;
-  Form2: undefined;
-  Form3: undefined;
+export type ModalScreenList = {
+  Modal1Page: undefined;
+  Modal2Page: undefined;
+  Modal3Page: undefined;
 };
 
-const ModalFormScreen: React.ComponentType = () => {
+const ModalScreen: React.ComponentType = () => {
   return (
-    <ModalFormStack.Navigator
+    <ModalStack.Navigator
       headerMode="none"
       mode="modal"
-      initialRouteName="Form 1">
-      <ModalFormStack.Screen name="Form1" component={ModalForm1} />
-      <ModalFormStack.Screen name="Form2" component={ModalForm2} />
-      <ModalFormStack.Screen name="Form3" component={ModalForm3} />
-    </ModalFormStack.Navigator>
+      initialRouteName="Modal1Page">
+      <ModalStack.Screen name="Modal1Page" component={Modal1Page} />
+      <ModalStack.Screen name="Modal2Page" component={Modal2Page} />
+      <ModalStack.Screen name="Modal3Page" component={Modal3Page} />
+    </ModalStack.Navigator>
   );
 };
 
 export const router = () => {
   return (
-    <ModalRoot.Navigator headerMode="none" initialRouteName="Home">
-      <ModalRoot.Screen name="Home" component={Home} />
-      <ModalRoot.Screen name="Form" component={ModalFormScreen} />
-      <ModalRoot.Screen name="Settings" component={Settings} />
-    </ModalRoot.Navigator>
+    <Root.Navigator headerMode="none" initialRouteName="Home">
+      <Root.Screen name="Home" component={Home} />
+      <Root.Screen name="Modal" component={ModalScreen} />
+      <Root.Screen name="NotModal" component={NotModal} />
+    </Root.Navigator>
   );
 };

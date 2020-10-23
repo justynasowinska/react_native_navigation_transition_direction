@@ -1,23 +1,21 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import { Button, Text } from 'react-native';
+import { Button } from 'react-native';
 import { Screen } from '../components/Screen';
-import { ModalRootScreenList } from '../router';
-import styles from './styles';
+import { RootScreenList } from '../router';
 
 interface Props {
-  navigation: StackNavigationProp<ModalRootScreenList>;
+  navigation: StackNavigationProp<RootScreenList>;
 }
 
 export const Home: React.FC<Props> = ({ navigation }) => {
-  const onPressFormButton = () => navigation.navigate('Form');
-  const onPressSettingsButton = () => navigation.navigate('Settings');
+  const onPressFormButton = () => navigation.navigate('Modal');
+  const onPressSettingsButton = () => navigation.navigate('NotModal');
 
   return (
     <Screen headerTitle="Home">
-      <Text style={styles.screenText}>Home Screen</Text>
-      <Button title="Form" onPress={onPressFormButton} />
-      <Button title="Settings" onPress={onPressSettingsButton} />
+      <Button title="Modal" onPress={onPressFormButton} />
+      <Button title="Not Modal" onPress={onPressSettingsButton} />
     </Screen>
   );
 };
