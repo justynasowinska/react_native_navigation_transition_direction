@@ -5,6 +5,7 @@ import { Modal1Page } from './screens/Modal1Page';
 import { Modal2Page } from './screens/Modal2Page';
 import { Modal3Page } from './screens/Modal3Page';
 import { NotModal } from './screens/NotModal';
+import { horizontalAnimation, verticalAnimation } from './utils';
 
 const Root = createStackNavigator();
 const ModalStack = createStackNavigator();
@@ -23,12 +24,13 @@ export type ModalScreenList = {
 
 const ModalScreen: React.ComponentType = () => {
   return (
-    <ModalStack.Navigator
-      headerMode="none"
-      mode="modal"
-      initialRouteName="Modal1Page">
+    <ModalStack.Navigator headerMode="none" initialRouteName="Modal1Page">
       <ModalStack.Screen name="Modal1Page" component={Modal1Page} />
-      <ModalStack.Screen name="Modal2Page" component={Modal2Page} />
+      <ModalStack.Screen
+        name="Modal2Page"
+        component={Modal2Page}
+        options={verticalAnimation}
+      />
       <ModalStack.Screen name="Modal3Page" component={Modal3Page} />
     </ModalStack.Navigator>
   );
@@ -36,10 +38,14 @@ const ModalScreen: React.ComponentType = () => {
 
 export const router = () => {
   return (
-    <Root.Navigator headerMode="none" initialRouteName="Home">
+    <Root.Navigator headerMode="none" initialRouteName="Home" mode="modal">
       <Root.Screen name="Home" component={Home} />
       <Root.Screen name="Modal" component={ModalScreen} />
-      <Root.Screen name="NotModal" component={NotModal} />
+      <Root.Screen
+        name="NotModal"
+        component={NotModal}
+        options={horizontalAnimation}
+      />
     </Root.Navigator>
   );
 };
