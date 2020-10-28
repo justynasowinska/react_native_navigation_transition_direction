@@ -37,7 +37,7 @@ export const verticalAnimation: StackNavigationOptions = {
     open: TransitionSpecs.TransitionIOSSpec,
     close: TransitionSpecs.TransitionIOSSpec,
   },
-  headerStyleInterpolator: HeaderStyleInterpolators.forFade,
+  headerStyleInterpolator: HeaderStyleInterpolators.forSlideUp,
   cardStyleInterpolator: ({
     current,
     layouts,

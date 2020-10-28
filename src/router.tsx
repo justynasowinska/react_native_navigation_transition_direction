@@ -26,7 +26,10 @@ export type ModalScreenList = {
 
 const ModalScreen: React.ComponentType = () => {
   return (
-    <ModalStack.Navigator headerMode="none" initialRouteName="Modal1Page">
+    <ModalStack.Navigator
+      headerMode="none"
+      initialRouteName="Modal1Page"
+      screenOptions={horizontalAnimation}>
       <ModalStack.Screen name="Modal1Page" component={Modal1Page} />
       <ModalStack.Screen name="Modal2Page" component={Modal2Page} />
       <ModalStack.Screen
