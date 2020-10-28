@@ -15,7 +15,7 @@ export const Screen: React.FC<Props> = ({ children, ...headerProps }) => {
 
   return (
     <>
-      <StatusBar barStyle="dark-content" />
+      <StatusBar barStyle="dark-content" backgroundColor="#FFF" />
       <View style={[styles.container, { paddingTop: safeAreaInsets.top }]}>
         <ScreenHeader {...headerProps} />
         <View style={[styles.screen, { paddingBottom: safeAreaInsets.bottom }]}>
