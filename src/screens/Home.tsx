@@ -1,6 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import { Button } from 'react-native';
+import { Button } from 'react-native-elements';
 import { Screen } from '../components/Screen';
 import { RootScreenList } from '../router';
 
@@ -14,8 +14,8 @@ export const Home: React.FC<Props> = ({ navigation }) => {
 
   return (
     <Screen headerTitle="Home">
-      <Button title="Modal" onPress={onPressFormButton} />
-      <Button title="Not Modal" onPress={onPressSettingsButton} />
+      <Button title="Modal" onPress={onPressFormButton} type="clear" />
+      <Button title="Not Modal" onPress={onPressSettingsButton} type="clear" />
     </Screen>
   );
 };

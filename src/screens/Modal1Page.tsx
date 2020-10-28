@@ -1,6 +1,6 @@
 import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react';
-import { Button } from 'react-native';
+import { Button } from 'react-native-elements';
 import { Screen } from '../components/Screen';
 import { ModalScreenList } from '../router';
 
@@ -13,7 +13,7 @@ export const Modal1Page: React.FC<Props> = ({ navigation }) => {
 
   return (
     <Screen headerTitle="Modal 1 Page - Modal Animation" rightAction="close">
-      <Button title="Next Page" onPress={onPressNextPage} />
+      <Button title="Next Page" onPress={onPressNextPage} type="clear" />
     </Screen>
   );
 };
