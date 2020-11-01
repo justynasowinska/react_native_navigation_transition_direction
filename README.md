@@ -2,7 +2,7 @@
 
 This repository illustrates how to change animation direction in React Native for custom screens with [react-navigation](https://reactnavigation.org/) library.
 
-Explanation with examples can be found in the blog post (will add link later)
+Explanation with examples can be found in the blog post [Change React Native screen animation direction with react-navigation] (https://medium.com/@just.sowinska/change-react-native-screen-animation-direction-with-react-navigation-8cec0f66f22)
 
 In this repository I'm using Typescript, but in the blog post you will find gists without Typescript added.
 
