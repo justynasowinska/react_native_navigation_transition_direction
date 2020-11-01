@@ -1,6 +1,6 @@
 # React Native - Change Navigation Direction
 
-This repository ilustrates how to change animation direction for custom screens with [react-navigation](https://reactnavigation.org/) librabry.
+This repository illustrates how to change animation direction in React Native for custom screens with [react-navigation](https://reactnavigation.org/) library.
 
 Explanation with examples can be found in the blog post (will add link later)
 
